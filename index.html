@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AVL Tree Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-to-br from-[#0f172a] via-[#020617] to-black min-h-screen text-white">
+
+  <!-- Top Navbar -->
+  <nav class="px-10 py-6 flex justify-between items-center">
+    <div class="flex items-center gap-6">
+      <h1 class="text-3xl font-extrabold tracking-wide bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+        AVL Visualizer
+      </h1>
+      <span class="text-slate-400 text-sm hidden sm:block">Self-Balancing Binary Search Tree</span>
+    </div>
+    <button onclick="toggleTheme()" id="themeToggle" class="theme-toggle" title="Toggle theme">
+      <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <svg class="moon-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Main Grid -->
+  <main class="grid grid-cols-1 xl:grid-cols-4 gap-6 px-8 pb-10">
+
+    <!-- Control Panel -->
+    <section class="xl:col-span-1 glass-card p-6 space-y-6">
+
+      <h2 class="text-xl font-bold text-indigo-300">Input Panel</h2>
+
+      <!-- Step 1 -->
+      <div>
+        <label class="block text-sm text-slate-400 mb-1">Step 1: Tree Size</label>
+        <input id="sizeInput" type="number"
+          class="super-input"
+          placeholder="Enter number of nodes">
+      </div>
+
+      <!-- Step 2 -->
+      <div>
+        <label class="block text-sm text-slate-400 mb-1">Step 2: Values</label>
+        <textarea id="valuesInput" rows="3"
+          class="super-input resize-none"
+          placeholder="Example: 10 20 30 40 50 25"></textarea>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col gap-3">
+        <button onclick="buildTree()" class="btn-primary">
+          Build AVL Tree
+        </button>
+
+        <button onclick="resetTree()" class="btn-danger">
+          Reset
+        </button>
+      </div>
+
+      <!-- Info -->
+      <div class="text-xs text-slate-400 border-t border-slate-700 pt-4">
+        • Auto balancing<br>
+        • LL, RR, LR, RL rotations<br>
+        • O(log n) height
+      </div>
+    </section>
+
+    <!-- Visualization Panel -->
+    <section class="xl:col-span-3 glass-card p-6 relative overflow-hidden">
+
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold text-indigo-300">Output Visualization</h2>
+      </div>
+
+      <svg id="treeSvg" class="w-full h-[600px]"></svg>
+
+      <!-- Glow -->
+      <div class="absolute inset-0 pointer-events-none glow-overlay"></div>
+    </section>
+
+  </main>
+
+  <footer class="text-center text-slate-500 text-xs py-6">
+    AVL Tree Visualizer • Advanced UI • Tailwind CSS
+  </footer>
+
+  <script src="avl.js"></script>
+  <script src="visualizer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* Theme Toggle Button */
+.theme-toggle {
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: rgba(99, 102, 241, 0.25);
+  transform: scale(1.05);
+}
+
+/* Light Mode Styles */
+body.light-mode {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe, #dbeafe) !important;
+}
+
+body.light-mode .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+}
+
+body.light-mode .super-input {
+  background: rgba(241, 245, 249, 0.9);
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  color: #1e293b;
+}
+
+body.light-mode .super-input::placeholder {
+  color: #94a3b8;
+}
+
+body.light-mode .super-input:focus {
+  border-color: #6366f1;
+  background: white;
+}
+
+body.light-mode h2,
+body.light-mode .text-indigo-300 {
+  color: #4f46e5 !important;
+}
+
+body.light-mode .text-slate-400 {
+  color: #64748b !important;
+}
+
+body.light-mode svg {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+}
+
+body.light-mode footer {
+  color: #475569 !important;
+}
+
+body.light-mode .theme-toggle {
+  background: rgba(99, 102, 241, 0.1);
+  color: #4f46e5;
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Inputs */
+.super-input {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(2, 6, 23, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+  color: white;
+  outline: none;
+}
+
+.super-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+/* Buttons */
+.btn-primary {
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+}
+
+.btn-danger {
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #f43f5e, #fb7185);
+}
+
+.btn-danger:hover {
+  box-shadow: 0 10px 25px rgba(244, 63, 94, 0.4);
+}
+
+/* Tree SVG */
+svg {
+  background: radial-gradient(circle at top, #020617, #000);
+  border-radius: 14px;
+}
+
+/* Nodes */
+.node {
+  fill: #6366f1;
+  stroke: #0f172a;
+  stroke-width: 2;
+}
+
+.node-text {
+  fill: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.edge {
+  stroke: #64748b;
+  stroke-width: 2;
+}
+
+/* Glow overlay */
+.glow-overlay {
+  background: radial-gradient(circle at center, rgba(99,102,241,0.12), transparent 70%);
+}
