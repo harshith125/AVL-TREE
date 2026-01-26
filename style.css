@@ -119,6 +119,16 @@ body.light-mode .theme-toggle {
 svg {
   background: radial-gradient(circle at top, #020617, #000);
   border-radius: 14px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  svg {
+    border-radius: 10px;
+  }
 }
 
 /* Nodes */

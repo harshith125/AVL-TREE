@@ -13,12 +13,14 @@ function buildTree() {
 
   root = null;
   svg.innerHTML = "";
+  updateSvgDimensions();
 
   for (let v of values) {
     root = tree.insert(root, v);
   }
 
-  drawTree(root, 600, 50, 240);
+  const dims = getResponsiveDimensions();
+  drawTree(root, dims.startX, dims.startY, dims.initialOffset, dims);
 }
 
 function resetTree() {
