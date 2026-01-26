@@ -74,7 +74,7 @@ function drawTree(node, x, y, xOffset) {
     line.setAttribute("stroke-width", "2");
     svg.appendChild(line);
 
-    drawTree(node.left, leftX, leftY, xOffset / 2);
+    drawTree(node.left, leftX, leftY, xOffset * 0.65);
   }
 
   // Draw right subtree
@@ -91,6 +91,6 @@ function drawTree(node, x, y, xOffset) {
     line.setAttribute("stroke-width", "2");
     svg.appendChild(line);
 
-    drawTree(node.right, rightX, rightY, xOffset / 2);
+    drawTree(node.right, rightX, rightY, xOffset * 0.65);
   }
 }
